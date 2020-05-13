@@ -12,8 +12,12 @@
     </van-nav-bar>
     <!-- /导航栏 -->
 
-    <van-tabs v-model="active">
+    <van-tabs
+    v-model="active"
+    class="channel-tabs"
+    >
       <van-tab
+      class="tab-item"
       :title="channel.name"
       v-for="channel in channels"
       :key="channel.id"
@@ -69,6 +73,18 @@ export default {
     }
     .van-icon {
       font-size: 16px;
+    }
+  }
+  .channel-tabs {
+    /deep/ .van-tab {
+      border-right: 1px solid #edeff3;
+      border-bottom: 1px solid #edeff3;
+    }
+    /deep/ .van-tabs__line {
+      width: 15px !important;
+      height: 3px;
+      background-color: #3296fa;
+      bottom: 18px;
     }
   }
 }

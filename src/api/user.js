@@ -28,7 +28,7 @@ export const getCurrentUser = () => {
     // }
   })
 }
-// 获取用户平道列表
+// 获取用户频道列表
 export const getUserChannels = () => {
   return request({
     method: 'GET',
